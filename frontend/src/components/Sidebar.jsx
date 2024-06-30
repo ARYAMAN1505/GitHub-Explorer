@@ -16,7 +16,7 @@ const Sidebar = () => {
     overflow-y-auto border-r bg-glass'>
     			<nav className='h-full flex flex-col gap-3'>
 				<Link to='/' className='flex justify-center'>
-					<img className='h-8' src='/github.svg' alt='Github Logo' />
+					<h1>Github Explorer</h1>
 				</Link>
                 <Link
 					to='/'
@@ -28,7 +28,8 @@ const Sidebar = () => {
 				{authUser && (
 					<Link
 						to='/likes'
-						className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg hover:bg-gray-800'
+						className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg 
+					hover:bg-gray-800'
 					>
 						<FaHeart size={22} />
 					</Link>
@@ -36,20 +37,23 @@ const Sidebar = () => {
 				{authUser && (
 					<Link
 						to='/explore'
-						className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg hover:bg-gray-800'
+						className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg 
+					hover:bg-gray-800'
 					>
 						<MdOutlineExplore size={25} />
 					</Link>
 				)}
 				{authUser && (
-					<div className='flex flex-col gap-2 mt-auto'>
+					<div className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg 
+					hover:bg-gray-800'>
 						<Logout />
 					</div>
 				)}
 				{!authUser && (
 					<Link
 						to='/login'
-						className='p-1.5 focus:outline-nones transition-colors duration-200 rounded-lg hover:bg-gray-800'
+						className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg 
+					hover:bg-gray-800'
 					>
 						<PiSignInBold size={25} />
 					</Link>
@@ -57,7 +61,8 @@ const Sidebar = () => {
 				{!authUser && (
 					<Link
 						to='/signup'
-						className='p-1.5 focus:outline-nones transition-colors duration-200 rounded-lg hover:bg-gray-800'
+						className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg 
+					hover:bg-gray-800'
 					>
 						<MdEditDocument size={25} />
 					</Link>
